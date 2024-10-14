@@ -10,8 +10,8 @@ public class UserDto {
     private String email;
     private String phone;
     private String role;
-    private String online;
-    private String isVerified;
+    private Boolean online;
+    private Boolean isVerified;
     private int numberStreet;
     private String typeStreet;
     private String nameStreet;

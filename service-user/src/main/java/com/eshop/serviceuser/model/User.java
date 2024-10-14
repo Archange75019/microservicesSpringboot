@@ -7,6 +7,7 @@ import lombok.Data;
 @Data
 @Table(name = "users")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -27,16 +28,16 @@ public class User {
     private String role;
 
     @Column(nullable = false)
-    private String online;
+    private boolean online;
 
-    @Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
-    private String isVerified;
+    @Column(nullable = false)
+    private boolean isVerified;
 
     @Column(nullable = false)
     private int numberStreet;
 
     @Column(nullable = false)
-    private String TypeStreet;
+    private String typeStreet;
 
     @Column(nullable = false)
     private String nameStreet;
@@ -46,5 +47,4 @@ public class User {
 
     @Column(nullable = false)
     private String city;
-
 }

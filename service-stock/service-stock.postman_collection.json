@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "11600a51-09ac-4982-be1e-4a496528bd30",
+		"name": "service-stock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4184948"
+	},
+	"item": [
+		{
+			"name": "Get Produit By ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNzMwMTE5OTA2LCJleHAiOjE3MzAxNTU5MDZ9.gS87Fv_azCvlqG_CfABRUSFYOSj82PPihYEbtZFLV_c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/service-stock/api/produits/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"service-stock",
+						"api",
+						"produits",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Produit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNzMwMTE5OTA2LCJleHAiOjE3MzAxNTU5MDZ9.gS87Fv_azCvlqG_CfABRUSFYOSj82PPihYEbtZFLV_c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nom\": \"Produit EXEMPLE333333\",\n    \"description\": \"Description Exemple\",\n    \"prixAchat\": 100.50,\n    \"prixVente\": 150.75,\n    \"quantiteStock\": 50,\n    \"quantiteSurface\": 30,\n    \"dateCommande\": \"2023-10-01\",\n    \"dateLivraison\": \"2023-10-10\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/service-stock/api/produits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"service-stock",
+						"api",
+						"produits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Produit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNzMwMTE5OTA2LCJleHAiOjE3MzAxNTU5MDZ9.gS87Fv_azCvlqG_CfABRUSFYOSj82PPihYEbtZFLV_c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nom\": \"Produit Mise à Jour2\",\n    \"description\": \"Description Mise à Jour\",\n    \"prixAchat\": 130.75,\n    \"prixVente\": 170.99,\n    \"quantiteStock\": 60,\n    \"quantiteSurface\": 40,\n    \"dateCommande\": \"2023-10-02\",\n    \"dateLivraison\": \"2023-10-12\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/service-stock//api/produits/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"service-stock",
+						"",
+						"api",
+						"produits",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Produit",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/service-stock/api/produits/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"service-stock",
+						"api",
+						"produits",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Acheter Produit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://<base_url>/api/produits/{id}/acheter?quantite=10",
+					"protocol": "http",
+					"host": [
+						"<base_url>"
+					],
+					"path": [
+						"api",
+						"produits",
+						"{id}",
+						"acheter"
+					],
+					"query": [
+						{
+							"key": "quantite",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
